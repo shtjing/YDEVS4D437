@@ -1,0 +1,11 @@
+projection;
+
+
+define behavior for YD437_C_TRAVEL //alias <alias_name>
+use etag
+{
+  use create;
+  use update;
+  use delete;
+  use action set_to_cancelled;  //自定义事件
+}

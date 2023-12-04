@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition YD437_C_TRAVEL'
+define service YD437_UI_TRAVEL {
+  expose YD437_C_TRAVEL;
+}

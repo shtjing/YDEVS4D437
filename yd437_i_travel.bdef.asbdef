@@ -1,0 +1,45 @@
+managed implementation in class zbp_d437_i_travel unique; //自定义事件类
+//strict;
+
+define behavior for YD437_I_TRAVEL //alias <alias_name>
+persistent table yd437_travel
+lock master
+//authorization master ( instance ) //权限检查 控制按钮和操作的权限
+authorization master ( instance )
+//authorization master ( global )
+//authorization master ( Static )
+etag master ChangedAt  //加锁
+{
+
+  field ( readonly, numbering : managed ) Trguid;     //UUID类型的主键自动随机生成 numbering : managed
+  field ( readonly : update ) AgencyID;                 //修改的时候，只读
+  field ( mandatory ) CustomerID, StartDate, EndDate;//设置字段必输
+  field (features:instance) CustomerID, StartDate;//(features:instance) 按钮，事件，字段的状态控制，对某条数据的动态控制P206-P209页
+
+
+  create;
+  update (features:instance);
+  delete;
+
+  action (features:instance) set_to_cancelled; //按钮事件
+
+  determination determineSemanticKey on modify { create; } //创建的时候自动赋值
+
+  validation validateCustomer on save { create; field CustomerID; } //创建的时候，保存事件的时候进行检查
+
+
+
+  mapping for YD437_TRAVEL corresponding //字段回写到CDS VIEW对应的字段里面
+  {
+    trguid = trguid;
+    AgencyID = agencynum;
+    TravelId = travelid;
+    ChangedAt = changed_at;
+    ChangedBy = changed_by;
+    TravelDescription = trdesc;
+    CustomerID = customid;
+    status = Status;
+    StartDate = stdat;
+    EndDate = enddat;
+  }
+}

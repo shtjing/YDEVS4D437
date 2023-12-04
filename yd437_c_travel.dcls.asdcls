@@ -1,0 +1,11 @@
+@EndUserText.label: 'YD437_C_TRAVEL'
+@MappingRole: true
+define role YD437_C_TRAVEL {
+    grant
+        select
+            on
+                YD437_C_TRAVEL
+                    where
+                        inheriting conditions from entity YD437_I_TRAVEL;
+                        
+}

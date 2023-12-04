@@ -1,0 +1,11 @@
+@EndUserText.label: 'YD437_I_TRAVEL'
+@MappingRole: true
+define role YD437_I_TRAVEL {
+    grant 
+        select
+            on
+                YD437_I_TRAVEL
+                    where
+                        (AgencyID) = aspect pfcg_auth(S_DEVELOP, DEVCLASS, ACTVT = '03');
+                        
+}
