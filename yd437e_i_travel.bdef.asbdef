@@ -1,0 +1,139 @@
+/***************** Business Object Travel **********************/
+
+managed implementation in class Zbp_d437e_i_travel unique;
+with draft;
+
+/***************** Root Entity Travel *************************/
+
+define behavior for YD437e_I_Travel alias Travel
+persistent table yd437e_travel
+draft table yd437e_travel_d
+lock master
+total etag ChangedAt
+etag master LocalChangedAt
+authorization master ( instance )
+{
+
+  field ( readonly, numbering : managed ) Trguid;
+  field ( readonly ) AgencyID, TravelID, Status;
+  field ( mandatory ) EndDate;
+  field ( features : instance ) CustomerID, StartDate;
+
+  create;
+  update ( features : instance );
+  delete;
+
+  association _TravelItem { create; with draft; }
+
+  static action issue_message;
+
+  action ( features : instance ) set_to_cancelled;
+
+  determination determineSemanticKey on modify { create; }
+
+  validation validateCustomer on save
+  { create;
+    field CustomerID;
+  }
+  validation validateStartDate on save
+  { create;
+    field StartDate;
+  }
+  validation validateEndDate on save
+  { create;
+    field EndDate;
+  }
+  validation validateSequence on save
+  { create;
+    field StartDate, EndDate;
+  }
+
+  // explicitly declare the draft actions
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+
+  // assign prepare to validations/determinations
+  draft determine action Prepare
+  {
+    validation validateCustomer;
+    validation validateStartDate;
+    validation validateEndDate;
+    validation validateSequence;
+
+    validation Item ~ validateFlightClass;
+    validation Item ~ validateFlightDate;
+    validation Item ~ validateFlight;
+
+  }
+
+  mapping for Yd437e_travel corresponding
+  {
+    AgencyID = agencynum;
+    TravelDescription = trdesc;
+    CustomerID = customid;
+    StartDate = stdat;
+    EndDate = enddat;
+    ChangedAt = changed_at;
+    ChangedBy = changed_by;
+    LocalChangedAt = loc_changed_at;
+  }
+}
+
+/***************** Child Entity Travel Item *******************/
+
+define behavior for YD437e_I_TravelItem alias Item
+persistent table yd437e_tritem
+draft table yd437e_tritem_d
+lock dependent by _Travel
+authorization dependent by _Travel
+etag master LocalChangedAt
+{
+
+  field ( readonly, numbering : managed ) Itguid;
+  field ( readonly ) AgencyID, TravelId, ItemID, Trguid;
+
+  update;
+  delete;
+
+  association _Travel { with draft; }
+
+  determination determineSemanticKey on modify { create; }
+
+  validation validateFlightClass on save
+  { create;
+    field FlightClass;
+  }
+
+  validation validateFlightDate on save
+  { create;
+    field FlightDate;
+  }
+
+  validation validateFlight on save
+  { create;
+    field CarrierId, ConnectionId, FlightDate;
+  }
+
+
+  mapping for Yd437e_tritem
+  {
+    Itguid = itguid;
+    AgencyID = agencynum;
+    TravelId = travelid;
+    ItemID = tritemno;
+    Trguid = trguid;
+    CarrierId = carrid;
+    ConnectionId = connid;
+    FlightDate = fldate;
+    BookingId = bookid;
+    FlightClass = class;
+    PassengerName = passname;
+    CreatedAt = created_at;
+    CreatedBy = created_by;
+    ChangedAt = changed_at;
+    ChangedBy = changed_by;
+    LocalChangedAt = loc_changed_at;
+  }
+}

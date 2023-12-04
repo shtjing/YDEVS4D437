@@ -1,0 +1,22 @@
+projection;
+//strict; //Comment this line in to enable strict mode. The strict mode is prerequisite to be future proof regarding syntax and to be able to release your BO.
+use draft;
+
+define behavior for YD437D_C_TRAVEL  alias Travel //alias <alias_name>
+use etag
+{
+  use create;
+  use update;
+  //  use delete;
+
+  use action issue_message;
+
+  use action set_to_cancelled;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+
+  use action Prepare;
+}

@@ -1,0 +1,5 @@
+@EndUserText.label: 'YD437e_UI_TravelZ'
+define service YD437e_UI_TravelZ {
+  expose YD437e_C_Travel;
+  expose YD437e_C_TravelItem;
+}

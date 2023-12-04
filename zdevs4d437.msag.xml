@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZDEVS4D437</ARBGB>
+    <MASTERLANG>1</MASTERLANG>
+   </T100A>
+   <I18N_LANGS>
+    <LANGU>1</LANGU>
+   </I18N_LANGS>
+   <T100T>
+    <T100T>
+     <SPRSL>1</SPRSL>
+     <ARBGB>ZDEVS4D437</ARBGB>
+    </T100T>
+   </T100T>
+   <T100_TEXTS>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>005</MSGNR>
+     <TEXT>Transparent table &amp;1 does not exist or is not active</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>010</MSGNR>
+     <TEXT>Transparent table &amp;1 is not compatible with template</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>015</MSGNR>
+     <TEXT>The table is already empty</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>020</MSGNR>
+     <TEXT>The table still contains data</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>025</MSGNR>
+     <TEXT>You successfully issued a message</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>100</MSGNR>
+     <TEXT>You successfully issued a message</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>101</MSGNR>
+     <TEXT>Error creating the new BO instance</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>102</MSGNR>
+     <TEXT>Error updating BO instance &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>103</MSGNR>
+     <TEXT>Error reading BO instance &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>110</MSGNR>
+     <TEXT>Status of travel &amp;1 is already &amp;2</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>120</MSGNR>
+     <TEXT>You successfully cancelled the travel</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>130</MSGNR>
+     <TEXT>This travel is already cancelled</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>140</MSGNR>
+     <TEXT>No change authorization for travel agency &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>200</MSGNR>
+     <TEXT>Please make an entry</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>210</MSGNR>
+     <TEXT>Customer &amp;1 does not exist</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>220</MSGNR>
+     <TEXT>Wrong sequence of start date and end date</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>230</MSGNR>
+     <TEXT>Start date must not be in the past</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>240</MSGNR>
+     <TEXT>End date must not be in the past</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>300</MSGNR>
+     <TEXT>Invalid flight class &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>310</MSGNR>
+     <TEXT>Flight date must not be in the past</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>320</MSGNR>
+     <TEXT>Flight &amp;1 &amp;2 on &amp;3 does not exist</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>400</MSGNR>
+     <TEXT>Invalid flight class &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>410</MSGNR>
+     <TEXT>Flight date must not be in the past</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>420</MSGNR>
+     <TEXT>Flight &amp;1 &amp;2 on &amp;3 does not exist</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>600</MSGNR>
+     <TEXT>Travel Agency &amp;1 does not exist</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>601</MSGNR>
+     <TEXT>No authorization to create travel agency &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>602</MSGNR>
+     <TEXT>No authorization to update travel agency &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>603</MSGNR>
+     <TEXT>No authorization to read travel agency &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>604</MSGNR>
+     <TEXT>Please enter a travel agency number</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>605</MSGNR>
+     <TEXT>Travel Agency &amp;1 is locked by another user</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>606</MSGNR>
+     <TEXT>No authorization to delete travel agency &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>610</MSGNR>
+     <TEXT>Please provide some attributes for the travel agency</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>611</MSGNR>
+     <TEXT>External numbering not supported for travel agencies</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>612</MSGNR>
+     <TEXT>Cannot retrieve new travel agency number</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>615</MSGNR>
+     <TEXT>Travel agency &amp;1 is already marked for deletion</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>620</MSGNR>
+     <TEXT>Please enter a country</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>621</MSGNR>
+     <TEXT>Country &amp;1 is invalid</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>622</MSGNR>
+     <TEXT>Please enter a city</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>623</MSGNR>
+     <TEXT>City &amp;1 in coutry &amp;2 is invalid</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>624</MSGNR>
+     <TEXT>Please enter a currency code</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>625</MSGNR>
+     <TEXT>Currency code &amp;1 is invalid</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>626</MSGNR>
+     <TEXT>Please enter a language</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>627</MSGNR>
+     <TEXT>language &amp;1 is invalid</TEXT>
+    </item>
+    <item>
+     <SPRSL>1</SPRSL>
+     <MSGNR>650</MSGNR>
+     <TEXT>Error - cannot save your changes</TEXT>
+    </item>
+   </T100_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
